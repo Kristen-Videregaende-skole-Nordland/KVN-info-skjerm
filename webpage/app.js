@@ -52,6 +52,39 @@ function rotateArrow(degrees) {
 }
 
 
+function startClock(elementId) {
+  const el = document.getElementById(elementId);
+
+  function update() {
+    el.textContent = new Date().toLocaleTimeString("no-NO", {
+      timeZone: "Europe/Oslo",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+
+function getFormattedDate() {
+  const today = new Date();
+
+  const formatted = today.toLocaleDateString("no-NO", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    timeZone: "Europe/Oslo"
+  });
+
+  // Stor forbokstav på ukedag
+  return formatted.charAt(0).toUpperCase() + formatted.slice(1);
+}
+
+document.getElementById("date").textContent = getFormattedDate();
+
 getWeather();
 getCalender()
-
+startClock("clock")
