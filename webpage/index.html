@@ -29,7 +29,15 @@
             <h2>Live fra fuglekassa</h2>
         </div>
         <div class="liveStreamBottom">
-             <img  src="pic/bird.png" alt="" width="100%" height="90%" >
+             <iframe
+                width="100%"
+                height="350"
+                src="https://www.youtube.com/embed/rq85-VGO1do"
+                title="YouTube livestream"
+                frameborder="0"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+                </iframe>
         </div>
 
         
@@ -42,23 +50,31 @@
 
     <div class="right">
 
-    <section>
-        <h2 class="locationName">Nesna</h2>
-        <img src="pic/vær.png" alt="">
+    <section class="weatherBox">
+        <div class="weatherHeader">
+            <h2 class="locationName">Nesna</h2>
+            <img class="wpic" src="pic/vær.png" alt="" width="65">
+        </div>
+        
           <hr>
 
-       
-        <div>
-            <img src="pic/vind.png" alt="">
-            <p>5/ms</p>
-            <p>Lett bris fra sørøst</p>
+        
+        <div class="weatherBody">
+            <div class="wind">
+                <div id="arrow">
+                    <img src="pic/wind.png" alt="" width="45">
+                </div>
+                
+                <p id="ms">5/ms</p>
+            </div>
+
+            <div class="temperature">
+                <img src="pic/temp.png" width="35" alt="">
+                <h3 class="temp"></h3>
+            </div>
         </div>
 
-        <div>
-            <img src="" alt="">
-            <h3 class="temp">14°C</h3>
-            <p>Føles som 6°C</p>
-        </div>
+        
     </section>
 
     
@@ -66,7 +82,7 @@
         <h2>Mandag</h2>
         <p>26 januar</p>
               <hr>
-        <h3>Skidag på skillevollen</h3>
+        <h3>HavVett-samling</h3>
 
 
     
@@ -86,3 +102,4 @@
     <script type="module" src="app.js"></script>
 </body>
 </html>
+

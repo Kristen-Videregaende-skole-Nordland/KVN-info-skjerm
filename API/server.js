@@ -121,13 +121,13 @@ app.get("/api/weather/:location", async (req, res) => {
     }
 
     // Vi henter "current" (nå) + dagens min/max via daily
-    const url =
-      "https://api.open-meteo.com/v1/forecast" +
-      `?latitude=${loc.lat}` +
-      `&longitude=${loc.lon}` +
-      "&timezone=Europe%2FOslo" +
-      "&current=temperature_2m,precipitation,wind_speed_10m,weather_code" +
-      "&daily=temperature_2m_max,temperature_2m_min,precipitation_sum";
+const url =
+  "https://api.open-meteo.com/v1/forecast" +
+  `?latitude=${loc.lat}` +
+  `&longitude=${loc.lon}` +
+  "&timezone=Europe%2FOslo" +
+  "&current=temperature_2m,precipitation,wind_speed_10m,wind_direction_10m,weather_code" +
+  "&daily=temperature_2m_max,temperature_2m_min,precipitation_sum";
 
     const r = await fetch(url);
     const data = await r.json();

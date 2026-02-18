@@ -50,7 +50,9 @@ h1, h2, h3, p {
 }
 
 .liveStreamBottom {
-    height: 400px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +68,7 @@ h1, h2, h3, p {
 
 
 .right {
-  width: 70%;
+  width: 100%;
 }
 
 .right section {
@@ -74,4 +76,35 @@ h1, h2, h3, p {
   border-radius: 15px;
   margin: 20px;
   padding: 15px;
+}
+
+.weatherHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+#arrow {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wind {
+  display: flex;
+
+}
+
+.weatherBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+    align-items: center;
 }
